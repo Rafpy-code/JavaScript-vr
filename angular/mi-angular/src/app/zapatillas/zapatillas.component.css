@@ -1,0 +1,13 @@
+.caras{
+  background-color: black;
+  color: chartreuse;
+  font-size: 35px;
+}
+
+.fondoRojo{
+  background-color: red;
+}
+
+.subrayado{
+  text-decoration: underline;
+}

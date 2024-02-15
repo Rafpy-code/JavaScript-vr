@@ -1,0 +1,15 @@
+h1{
+    color: red;
+    text-align: center;
+}
+img{
+    display:block;
+    margin:auto;
+}
+#resultado{
+    text-align: center;
+    background-color: rgb(179, 240, 167);
+    color:rgb(94, 66, 16);
+    font-weight:bold;
+    Font-size:20px;
+}

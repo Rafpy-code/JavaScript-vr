@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Proyecto con JavaScript</title>
+
+	<!-- Estilos CSS -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css" />
+	<link id="theme" rel="stylesheet" type="text/css" href="css/green.css" />
+	<link rel="stylesheet" href="bootstrap-5.2.3/css/bootstrap.css">
+
+	<!-- jQuery -->
+	<script src="jquery/jquery-3.6.4.min.js"></script>
+
+	<!-- jQuery UI-->
+	<link rel="stylesheet" href="jqueryUi/jquery-ui.css">
+
+	<!-- Plugin validacion -->
+	<script src="jquery/jquery.form-validator.min.js"></script>
+
+	<!-- Mis Scripts -->
+	<script src="js/main.js"></script>
+</head>
+
+<body>
+	<div id="selector-theme">
+		<div id="to-green"></div>
+		<div id="to-red"></div>
+		<div id="to-blue"></div>
+	</div>
+
+	<section id="global">
+
+		<!-- Cabecera -->
+		<header>
+			<div id="logo">
+				<h1>Proyecto JS</h1>
+			</div>
+
+			<div class="clearfix"></div>
+
+			<nav id="menu">
+				<ul>
+					<li><a href="index.html">Inicio</a></li>
+					<li><a href="reloj.html">Reloj</a></li>
+					<li><a href="about.html">Sobre mi</a></li>
+					<li><a href="contact.html">Contacto</a></li>
+				</ul>
+			</nav>
+		</header>
+
+
+		<!-- Contenido -->
+		<section id="content">
+
+			<div id="box">
+				<!-- Cargar formulario -->
+				<h2>Contacto</h2>
+				<form class="row g-3 needs-validation" novalidate>
+					<div class="col-md-4">
+						<label for="validationCustom01" class="form-label">Nombre</label>
+						<input type="text" class="form-control" id="validationCustom01" value="Ram" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+					<div class="col-md-4">
+						<label for="validationCustom02" class="form-label">Apellidos</label>
+						<input type="text" class="form-control" id="validationCustom02" value="Ón" required>
+						<div class="valid-feedback">
+							Looks good!
+						</div>
+					</div>
+					<div class="col-md-4">
+						<label for="validationCustomUsername" class="form-label">Usuario</label>
+						<div class="input-group has-validation">
+							<span class="input-group-text" id="inputGroupPrepend">@</span>
+							<input type="text" class="form-control" id="validationCustomUsername"
+								aria-describedby="inputGroupPrepend" required>
+							<div class="invalid-feedback">
+								Please choose a username.
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<label for="validationCustom03" class="form-label">Ciudad</label>
+						<input type="text" class="form-control" id="validationCustom03" required>
+						<div class="invalid-feedback">
+							Please provide a valid city.
+						</div>
+					</div>
+					
+					<div class="col-md-3">
+						<label for="validationCustom04" class="form-label">Provincia</label>
+						<select class="form-select" id="validationCustom04" required>
+							<option selected disabled value="">Lista de provincias...</option>
+							<option>Madrid</option>
+						</select>
+						<div class="invalid-feedback">
+							Please select a valid state.
+						</div>
+					</div>
+					<div class="col-md-3">
+						<label for="validationCustom05" class="form-label">Código Postal</label>
+						<input type="text" class="form-control" id="validationCustom05" required>
+						<div class="invalid-feedback">
+							Please provide a valid zip.
+						</div>
+					</div>
+					<div class="col-12">
+						<div class="form-check">
+							<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+							<label class="form-check-label" for="invalidCheck">
+								Acepto los términos y condiciones.
+							</label>
+							<div class="invalid-feedback">
+								You must agree before submitting.
+							</div>
+						</div>
+					</div>
+					<div class="col-12">
+						<button class="btn btn-primary" type="submit">Enviar</button>
+					</div>
+				</form>
+			</div>
+
+			<aside id="sidebar">
+				<div id="about">
+					<h4><span>¿Quien soy?</span></h4>
+					<img src="img/buho-cabreado.jpg" />
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sit amet malesuada erat,
+						acullamcorper justo.</p>
+				</div>
+
+				<div id="login">
+					<h4><span>Identificate</span></h4>
+					<form>
+						Nombre <input type="text" name="name" id="form_name" required/>
+						<br>
+						Correo <input type="text" name="email" requiredre/>
+						<br>
+						Contraseña <input type="password" name="password" required/>
+						<br>
+						<input type="submit" value="Entrar" />
+					</form>
+				</div>
+			</aside>
+
+			<div class="clearfix"></div>
+		</section>
+	</section>
+
+	<footer>
+		by Ramón - Html, Css, Bootstrap, JavaScript, jQuery,jQuery UI
+		<a href="#" class="subir">Ir arriba</a>
+	</footer>
+
+	<!--Bootstrap Form Validator-->
+	<script type="text/JavaScript" src="js/form-validator.js"></script>
+
+</body>
+
+</html>

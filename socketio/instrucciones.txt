@@ -1,0 +1,14 @@
+https://socket.io/docs/v4/client-installation/
+
+0. crear la carpeta del proyecto
+
+1. dentro del proyectp crear las carpetas:
+    cliente y servidor
+
+2. en la carpeta del proyecto:
+    npm init 
+
+3. instalar:
+    npm install express --save 
+    npm install socket.io --save
+    npm install nodemon --save-dev

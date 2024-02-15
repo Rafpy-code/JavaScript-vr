@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ titulo }}</title>
+  </head>
+  <body>
+    <h2>{{ titulo }}</h2>
+    <div>
+      <p>Añadir marcas de zapatillas</p>
+      <!--(blur)="onBlur()" -->
+      <input
+        type="text"
+        [(ngModel)]="nueva_marca"
+        (keyup.enter)="mostrarPalabra()"
+      /><button (click)="addMarca()">Añadir marca</button>
+      <p>
+        <strong>{{ nueva_marca }}</strong>
+      </p>
+      <div>
+        <button (click)="getMarca()">Mostrar marca ingresada</button>
+        <button disabled="disabled">Añadir marca</button>
+      </div>
+    </div>
+    <h3>Tenemos las mejores marcas de zapatillas</h3>
+    <ul style="list-style-type: none">
+      <li *ngFor="let marca of marcas; let i = index">
+        {{ i + 1 + ".- " + marca }}
+        <button (click)="deleteMarca(i)">Borrar marca</button>
+      </li>
+    </ul>
+
+    <div>
+      <h3>Las zapatillas que tenemos disponibles son las siguientes:</h3>
+      <ul style="list-style-type: none">
+        <li *ngFor="let zapatilla of zapatillas">
+          <span
+            [ngStyle]="{
+              'text-decoration': !zapatilla.existencia ? 'line-through' : 'none'
+            }"
+          >
+            Nombre: {{ zapatilla.nombre }},
+            <span> color: {{ zapatilla.color }},</span>
+            <strong [class.caras]="zapatilla.precio > 100"
+              [ngClass]="{
+                'fondoRojo': zapatilla.precio <= 100,
+                'subrayado': zapatilla.marca == 'Puma'
+              }"
+              >
+              precio: € {{ zapatilla.precio }}
+            </strong>
+          </span>
+
+          <span
+            *ngIf="zapatilla.precio < 100"
+            [style.background]="zapatilla.precio < 100 ? 'green' : 'blue'"
+            [style.color]="zapatilla.precio < 100 ? 'yellow' : 'white'"
+            ><i><b> >>>EN OFERTA!!!</b></i></span
+          >
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3>El color que más se solicita es el:</h3>
+      Ingresa el color predominante: <input type="text" [(ngModel)]="color" />
+      <ul [ngSwitch]="color">
+        <li *ngSwitchCase="'pink'">
+          El color predominante es el
+          <span
+            [ngStyle]="{
+              background: color,
+              color: 'blue'
+            }"
+            >purple</span
+          >
+        </li>
+        <li *ngSwitchCase="'red'">
+          El color predominante es el
+          <span
+            [ngStyle]="{
+              background: color,
+              color: 'white'
+            }"
+          >
+            galaxy</span
+          >
+        </li>
+        <li *ngSwitchCase="'black'">
+          El color predominante es el
+          <span
+            [ngStyle]="{
+              background: color,
+              color: 'white'
+            }"
+          >
+            black</span
+          >
+        </li>
+        <li *ngSwitchCase="'white'">
+          El color predominante es el
+          <span
+            [ngStyle]="{
+              background: color,
+              color: 'blue'
+            }"
+          >
+            white</span
+          >
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

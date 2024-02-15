@@ -1,0 +1,50 @@
+<h1>externo.component.html</h1>
+<hr>
+<strong>{{fecha}}</strong>
+<hr>
+<hr>
+<strong>{{fecha | date:'dd/MM/yyyy'}}</strong>
+<hr>
+<hr>
+<strong>{{fecha | date:'fullDate'}}</strong>
+<hr>
+<hr>
+<strong>{{4 | calculadora:5}}</strong>
+<hr>
+<div>
+  <input type="text" [(ngModel)]="userId" (keyup.enter)="peticionUsuario()">
+  <div *ngIf="!user">cargando...  :(</div>
+</div>
+<div>
+  <div *ngIf="user">
+    <img src="{{user.avatar}}" alt="{{user.first_name + ' ' + user.last_name}}" width="170px">
+    <h2>{{user.first_name + ' ' + user.last_name}}</h2>
+  </div>
+</div>
+<hr>
+<div>
+  <form #newUser="ngForm" (ngSubmit)="onSubmit(newUser)">
+    <div>
+      <label for="name">Nombre</label>
+      <input type="text" name="name" #name="ngModel" [(ngModel)]="new_user.name" required>
+      <span *ngIf="name.touched && !name.valid" [ngStyle]="{color:'red'}">
+        El nombre no es válido!
+      </span>
+    </div>
+    <div>
+      <label for="job">Trabajo</label>
+      <input type="text" name="job" #job="ngModel" [(ngModel)]="new_user.job" required>
+      <span *ngIf="job.touched && !job.valid" style="color: red;">
+        El trabajo no es válido!
+      </span>
+    </div>
+    <div>
+      <input type="submit" value="Crear nuevo susuario" [disabled]="!newUser.form.valid">
+    </div>
+<div *ngIf="user_created">
+  <h2>Usuario creado correctamente</h2>
+  <h3>{{user_created.name}}</h3>
+  <h3>{{user_created.job}}</h3>
+</div>
+  </form>
+</div>

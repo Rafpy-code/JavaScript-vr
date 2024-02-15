@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socket.IO y NodeJs</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <h1 class="verde">Chat con Socket.IO y NodeJs</h1>
+    <div class="container">
+        <form id="formulario" onsubmit="return addMessage(this);">
+            <label id="nickLabel">Nickname
+                <input type="text" id="nickname">
+            </label>
+            <br>
+            <label>Mensaje
+                <textarea name="text" id="text" cols="30" rows="3"></textarea>
+            </label>
+            <input type="submit" value="Enviar">
+        </form>
+   
+        <div id="messages"></div>
+ 
+    </div>
+</body>
+
+</html>

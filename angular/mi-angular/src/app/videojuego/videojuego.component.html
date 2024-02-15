@@ -1,0 +1,22 @@
+<div>
+  <p>Esta es la página de los videojuegos</p>
+  <h2>{{ titulo }}</h2>
+  <h3>{{ listado }}</h3>
+  <button (click)="cambiarTitulo()">Cambiar el título de Videojuegos</button>
+  <div>
+    <button (click)="ocultarMostrarLista(true)" *ngIf="!mostrar_lista_juegos">
+      Mostrar
+    </button>
+    <button (click)="ocultarMostrarLista(false)" *ngIf="mostrar_lista_juegos">
+      Ocultar
+    </button>
+    <!-- videojuego.component.ts  @Component({    selector: 'videojuego',<videojuego ></videojuego>-->
+
+  </div>
+  <ul *ngIf="mostrar_lista_juegos">
+    <li>Mario Bros</li>
+    <li>Donkey Kong</li>
+    <li>Mortal Kombat</li>
+    <li>Call of Dutty</li>
+  </ul>
+</div>

@@ -1,0 +1,30 @@
+
+<header>
+  <nav id="barraNav">
+    <img src="../assets/logo/logo.png" (click)="mostrarMenu()" alt="logo" class="nav-button mi-logo"/>
+    <!--
+    <button class="nav-button" (click)="mostrarMenu()">M E N Ú</button>
+-->
+        <a [routerLink]="['/sobre-mi']" [routerLinkActive]="['actived']"
+          class="nav-enlace ocultar">Sobre mí</a>
+
+        <a [routerLink]="['/proyectos']" [routerLinkActive]="['actived']"
+        class="nav-enlace ocultar">Proyectos</a>
+
+        <a id="mi-logo" href="#"><img src="../assets/logo/logo.png" alt="logo" class="mi-logo"/></a>
+
+        <a [routerLink]="['/crear-proyecto']" [routerLinkActive]="['actived']"
+        class="nav-enlace ocultar">Crear un proyecto</a>
+
+        <a [routerLink]="['/contacto']" [routerLinkActive]="['actived']"
+        class="nav-enlace ocultar">Contacto</a>
+  </nav>
+</header>
+
+<section id="content">
+
+  <router-outlet></router-outlet>
+
+</section>
+
+<footer>by Ramón Francisco</footer>

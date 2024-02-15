@@ -1,0 +1,423 @@
+/*Importar fonts*/
+
+@font-face {
+  font-family: "satisfy";
+  src: url("../fonts/satisfy.ttf");
+}
+
+/*Styles generales*/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gainsboro;
+  background-attachment: fixed;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+/*Header*/
+header {
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  background-color: #54A0FC;
+  font-family: "satisfy", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+}
+
+nav {
+  display: flex;
+  background: #54A0FC;
+  padding: 5px;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.nav-enlace,
+.nav-button,
+.mi-logo {
+  display: inline-block;
+  /*background: #73A9AD;*/
+  color: blue;
+  padding: 10px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid blue;
+}
+
+.nav-button {
+  display: none;
+}
+
+.mi-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  padding: 3px;
+}
+
+#mi-logo {
+  transition: transform 500ms;
+}
+
+#mi-logo a:hover {
+  background-color: transparent;
+  transform: scale(1.3, 1.3);
+}
+
+header a:hover,
+.actived {
+  background-color: rgba(15, 37, 64, 0.5);
+  color: white;
+}
+
+/*Contenedor principal*/
+
+#content {
+  min-height: 650px;
+  height: auto;
+  width: 90%;
+  margin: 0px auto;
+  box-shadow: 0px 0px 40px black;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  padding-top: 120px;
+}
+
+/*Footer*/
+footer {
+  width: 75%;
+  margin: 0px auto;
+  padding-top: 15px;
+  font-family: "satisfy", Arial, Helvetica, sans-serif;
+  color: rgb(15, 37, 64);
+}
+
+/*Sobre mi*/
+
+#title {
+  width: 70%;
+  margin: 0px auto;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 70px;
+}
+
+#title h1 {
+  font-family: "satisfy", Arial, Helvetica, sans-serif;
+  font-size: 50px;
+  border-bottom: 1px solid rgba(15, 37, 64, 0.5);
+  padding-bottom: 5px;
+}
+
+#title h2 {
+  font-family: "satisfy", Arial, Helvetica, sans-serif;
+  color: #575757;
+  font-size: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+article.about {
+  width: 70%;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 23px;
+}
+
+.about h2 {
+  border-bottom: 1px solid #575757;
+  ;
+  padding-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+.about p {
+  color: #575757;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  text-align: justify;
+}
+
+/*Form crear proyectos*/
+.container {
+  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*Pagina de proyectos*/
+.gallery{
+  width: 90%;
+  height: 500px;
+  margin: auto auto;
+  overflow: hidden;
+  padding: 0.1px;
+}
+
+
+ .ulProjects {
+  margin: -10px auto;
+}
+
+
+.project {
+  list-style: none;
+  display: block;
+  float: left;
+  width: 30%;
+  text-align: center;
+  margin: 0px auto;
+}
+
+.project .image {
+  padding: 7px;
+  width: 120px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+
+
+.project a {
+  text-decoration: none;
+  color: black;
+}
+
+.confirm {
+  display: block;
+  font-weight: bold;
+  margin-top: 20px;
+}
+/* ________________________________________fin */
+
+/* PROJETC DETAIL */
+
+.cardDetail{
+  width: 300px;
+  padding: 0 0 30px;
+  margin: 30px auto;
+  border-radius: 5px;
+  box-shadow: 5px 6px 11px 0px rgba(20,18,20,0.75);
+}
+
+.imgDetail{
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.contenedorDetail{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+
+.titleDetail{
+  color: #A60909;
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.copyDetail{
+  text-align: center;
+}
+
+
+.ctaDetail{
+  display: block;
+  background: ctaDetail;
+ /*  padding: 13px 0; */
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+/* ________________________________________FIN */
+
+
+.container .image img {
+  margin-top: -20px;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+}
+
+.container h2 {
+  display: block;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.contenedor-img-data {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.detail-div-imagen {
+  transform: scale(0.75);
+}
+
+.detail-div-contenido {
+  margin: auto;
+  padding: auto auto;
+  width: max-content;
+  align-content: center;
+  vertical-align: middle;
+  text-align: justify;
+}
+
+form {
+  width: 80%;
+}
+
+form label {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form textarea {
+  width: 40%;
+  padding: 5px;
+}
+
+form button,
+form input[type="submit"],
+.button-edit,
+.button-delete {
+  display: block;
+  font-size: 17px;
+  padding: 10px;
+  margin-top: 15px;
+  color: white;
+  background: rgba(53, 103, 164, 1);
+  border: 1px solid rgba(13, 67, 133, 1);
+  cursor: pointer;
+}
+
+.button-edit,
+.button-delete {
+  width: 30%;
+  text-align: center;
+  float: left;
+  margin-right: 10px;
+  text-decoration: none;
+}
+
+.button-edit {
+  background: orange;
+  border: none;
+}
+
+.button-delete {
+  background: red;
+  border: none;
+}
+
+form button:hover,
+form input[type="submit"]:hover {
+  background: rgba(2, 178, 2, 0.8);
+  color: white;
+  border: 1px solid rgba(13, 67, 133, 1);
+}
+
+form input[disabled] {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.form_error {
+  font-size: 13px;
+  padding: 3px;
+  background: red;
+  color: white;
+  margin-left: 5px;
+}
+
+.message {
+  width: 50%;
+  padding: 5px;
+  border: 1px solid #eee;
+}
+
+.success {
+  background: green;
+  color: white;
+}
+
+.message a {
+  color: white;
+}
+
+.failed {
+  background: red;
+  color: white;
+}
+
+
+
+
+/*MENÚ*/
+/*NAV-BAR @media-querys*/
+@media (max-width:600px) {
+
+  nav {
+    background: #54A0FC;
+    flex-direction: column;
+  }
+
+  .nav-enlace {
+    margin: 5px;
+  }
+
+  .nav-button {
+    margin: auto;
+    display: inline-block;
+  }
+
+  .nav-button:hover {
+    background-color: blue;
+    width: 80px;
+    height: 80px;
+    transition: 500ms;
+  }
+
+  .ocultar {
+    display: none;
+  }
+
+  #mi-logo {
+    visibility: hidden;
+  }
+
+  /*Form crear proyecos*/
+  .container {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+}
